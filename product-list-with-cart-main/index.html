@@ -35,27 +35,27 @@
     <style>
       @font-face {
         font-display: swap;
-        font-family: "Red Hat Text";
+        font-family: 'Red Hat Text';
         font-style: normal;
         font-weight: 400;
-        src: url("fonts/red-hat-text-v14-latin-regular.woff2") format("woff2");
+        src: url('fonts/red-hat-text-v14-latin-regular.woff2') format('woff2');
       }
       @font-face {
         font-display: swap;
-        font-family: "Red Hat Text";
+        font-family: 'Red Hat Text';
         font-style: normal;
         font-weight: 600;
-        src: url("fonts/red-hat-text-v14-latin-600.woff2") format("woff2");
+        src: url('fonts/red-hat-text-v14-latin-600.woff2') format('woff2');
       }
       @font-face {
         font-display: swap;
-        font-family: "Red Hat Text";
+        font-family: 'Red Hat Text';
         font-style: normal;
         font-weight: 700;
-        src: url("fonts/red-hat-text-v14-latin-700.woff2") format("woff2");
+        src: url('fonts/red-hat-text-v14-latin-700.woff2') format('woff2');
       }
       body {
-        font-family: "Red Hat Text", sans-serif;
+        font-family: 'Red Hat Text', sans-serif;
       }
     </style>
   </head>
@@ -183,11 +183,11 @@
           <p class="hero_paragraph-price">$4.50</p>
         </li>
         <li class="hero_listItem">
-          <picture
-            >
+          <picture>
             <source
               srcset="images/image-brownie-desktop.jpg"
-              media="(min-width: 60rem)" /><source
+              media="(min-width: 60rem)" />
+            <source
               srcset="images/image-brownie-tablet.jpg"
               media="(min-width: 40rem)" />
             <img
@@ -200,11 +200,11 @@
           <p class="hero_paragraph-price">$4.50</p>
         </li>
         <li class="hero_listItem">
-          <picture
-            >
+          <picture>
             <source
               srcset="images/image-panna-cotta-desktop.jpg"
-              media="(min-width: 60rem)" /><source
+              media="(min-width: 60rem)" />
+            <source
               srcset="images/image-panna-cotta-tablet.jpg"
               media="(min-width: 40rem)" />
             <img
@@ -222,13 +222,69 @@
       <h2 class="cart_header">
         Your Cart <span class="card_span-header js-card_span-header">( )</span>
       </h2>
-      <div class="cart_empty-container">
+      <!-- <div class="cart_empty-container">
         <img
           src="images/illustration-empty-cart.svg"
           alt=""
           class="cart_img-empty"
         />
         <p class="cart_paragraph-empty">Your added items will appear here</p>
+      </div> -->
+      <div class="cart__container">
+        <div class="cart__items">
+          <div class="cart__item">
+            <div class="cart__info">
+              <p class="cart__title">Classic Tiramisu</p>
+              <div>
+                <p class="cart__quantity">1x</p>
+                <p class="cart__price">@ $5.50</p>
+                <p class="cart__total">$5.50</p>
+              </div>
+            </div>
+            <a href="#" class="cart__remove" id="removeCart">
+              <img src="/images/icon-remove-item.svg" alt="Remove Icon" />
+            </a>
+          </div>
+          <div class="cart__item">
+            <div class="cart__info">
+              <p class="cart__title">Classic Tiramisu</p>
+              <div>
+                <p class="cart__quantity">1x</p>
+                <p class="cart__price">@ $5.50</p>
+                <p class="cart__total">$5.50</p>
+              </div>
+            </div>
+            <a href="#" class="cart__remove" id="removeCart">
+              <img src="/images/icon-remove-item.svg" alt="Remove Icon" />
+            </a>
+          </div>
+          <div class="cart__item">
+            <div class="cart__info">
+              <p class="cart__title">Classic Tiramisu</p>
+              <div>
+                <p class="cart__quantity">1x</p>
+                <p class="cart__price">@ $5.50</p>
+                <p class="cart__total">$5.50</p>
+              </div>
+            </div>
+            <a href="#" class="cart__remove" id="removeCart">
+              <img src="/images/icon-remove-item.svg" alt="Remove Icon" />
+            </a>
+          </div>
+        </div>
+
+        <div class="cart__totalAmount">
+          <p>Order Total</p>
+          <span>$46.50</span>
+        </div>
+
+        <div class="cart__deliveryInfo">
+          <img src="/images/icon-carbon-neutral.svg" alt="" />
+          <p>
+            This is a <span class="text-bold">carbon-neutral</span> delivery
+          </p>
+        </div>
+        <button type="button" class="btn btn-order">Confirm Order</button>
       </div>
     </section>
   </body>
