@@ -29,6 +29,7 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
 #root,
 #__next {
   isolation: isolate;
@@ -42,6 +43,10 @@ h6 {
   --Rose-400: hsl(7, 20%, 60%);
   --Rose-500: hsl(12, 20%, 44%);
   --Rose-900: hsl(14, 65%, 9%);
+
+  --font-normal: 400;
+  --font-medium: 600;
+  --font-bold: 700;
 }
 html {
   background-color: var(--Rose-50);
@@ -54,8 +59,33 @@ body {
   padding: 1rem;
   width: fit-content;
 }
+
+.text-bold {
+  font-weight: var(--font-bold);
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding-block: 1rem;
+  font-size: 1rem;
+  border-radius: 20rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-order {
+  width: 100%;
+  background-color: var(--Red);
+}
+
 .hero {
   margin-bottom: 3rem;
+  flex: 1;
 }
 .hero_header {
   font-size: 2.5rem;
@@ -115,6 +145,7 @@ body {
   padding: 1.5rem;
   width: 100%;
   background-color: white;
+  flex: 0.3;
 }
 .cart_header {
   color: var(--Red);
@@ -129,6 +160,74 @@ body {
   font-weight: 600;
   text-align: center;
 }
+
+.cart__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.cart__item,
+.cart__info > div,
+.cart__totalAmount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__item {
+  padding-block: 1rem;
+  align-items: center;
+  border-bottom: solid 1px var(--Rose-100);
+}
+
+.cart__title,
+.cart__quantity {
+  font-weight: var(--font-medium);
+}
+
+.cart__title {
+  color: var(--Rose-900);
+}
+
+.cart__quantity {
+  color: var(--Red);
+}
+
+.cart__price {
+  color: var(--Rose-400);
+}
+.cart__total {
+  font-weight: var(--font-medium);
+  color: var(--Rose-500);
+}
+
+.cart__remove {
+  display: block;
+  border: solid 1px var(--Rose-500);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.cart__info > div {
+  gap: 1.6rem;
+}
+
+.cart__totalAmount {
+  align-items: center;
+}
+.cart__totalAmount > span {
+  font-size: 1.6rem;
+  font-weight: var(--font-bold);
+}
+
+.cart__deliveryInfo {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.1rem;
+  padding-block: 1rem;
+  background-color: var(--Rose-50);
+}
+
 @media (min-width: 40rem) {
   .hero_list {
     display: grid;
