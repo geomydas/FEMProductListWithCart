@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Product list with cart</title>
+    <link
+      rel="preload"
+      href="fonts/red-hat-text-v14-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/red-hat-text-v14-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/red-hat-text-v14-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @font-face {
+        font-display: swap;
+        font-family: "Red Hat Text";
+        font-style: normal;
+        font-weight: 400;
+        src: url("fonts/red-hat-text-v14-latin-regular.woff2") format("woff2");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "Red Hat Text";
+        font-style: normal;
+        font-weight: 600;
+        src: url("fonts/red-hat-text-v14-latin-600.woff2") format("woff2");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "Red Hat Text";
+        font-style: normal;
+        font-weight: 700;
+        src: url("fonts/red-hat-text-v14-latin-700.woff2") format("woff2");
+      }
+      body {
+        font-family: "Red Hat Text", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="hero">
+      <h1 class="hero_header">Desserts</h1>
+      <ul class="hero_list">
+        <li class="hero_listItem">
+          <picture
+            ><source
+              srcset="images/image-waffle-tablet.jpg"
+              media="(min-width: 40rem)" />
+            <img
+              src="images/image-waffle-mobile.jpg"
+              alt=""
+              class="hero_image" /></picture
+          ><button class="hero_button-addtocart">Add to Cart</button>
+          <h3 class="hero_supersubheader-genre">Waffle</h3>
+          <h2 class="hero_subheader-name">Waffle with Berries</h2>
+          <p class="hero_paragraph-price">$6.50</p>
+        </li>
+        <li class="hero_listItem">
+          <picture
+            ><source
+              srcset="images/image-creme-brulee-tablet.jpg"
+              media="(min-width: 40rem)" />
+            <img
+              src="images/image-creme-brulee-mobile.jpg"
+              alt=""
+              class="hero_image" /></picture
+          ><button class="hero_button-addtocart">Add to Cart</button>
+          <h3 class="hero_supersubheader-genre">Crème Brûlée</h3>
+          <h2 class="hero_subheader-name">Vanilla Bean Crème Brûlée</h2>
+          <p class="hero_paragraph-price">$7.00</p>
+        </li>
+        <li class="hero_listItem">
+          <picture
+            ><source
+              srcset="images/image-macaron-tablet.jpg"
+              media="(min-width: 40rem)" />
+            <img
+              src="images/image-macaron-mobile.jpg"
+              alt=""
+              class="hero_image" /></picture
+          ><button class="hero_button-addtocart">Add to Cart</button>
+          <h3 class="hero_supersubheader-genre">Macaron</h3>
+          <h2 class="hero_subheader-name">Macaron Mix of Five</h2>
+          <p class="hero_paragraph-price">$8.00</p>
+        </li>
+        <li class="hero_listItem">
+          <picture
+            ><source
+              srcset="images/image-tiramisu-dektop.jpg"
+              media="(min-width: 40rem)" />
+            <imgz
+              src="images/image-tiramisu-mobile.jpg"
+              alt=""
+              class="hero_image" /></picture
+          ><button class="hero_button-addtocart">Add to Cart</button>
+          <h3 class="hero_supersubheader-genre">Tiramisu</h3>
+          <h2 class="hero_subheader-name">Classic Tiramisu</h2>
+          <p class="hero_paragraph-price">$5.50</p>
+        </li>
+        <li class="hero_listItem">
+          <picture
+            ><source
+              srcset="images/image-baklava-tablet.jpg"
+              media="(min-width: 40rem)" />
+            <img
+              src="images/image-baklava-mobile.jpg"
+              alt=""
+              class="hero_image" /></picture
+          ><button class="hero_button-addtocart">Add to Cart</button>
+          <h3 class="hero_supersubheader-genre">Baklava</h3>
+          <h2 class="hero_subheader-name">Pistachio Baklava</h2>
+          <p class="hero_paragraph-price">$4.00</p>
+        </li>
+        <li class="hero_listItem">
+          <picture
+            ><source
+              srcset="images/image-waffle-tablet.jpg"
+              media="(min-width: 40rem)" />
+            <img
+              src="images/image-meringue-mobile.jpg"
+              alt=""
+              class="hero_image" /></picture
+          ><button class="hero_button-addtocart">Add to Cart</button>
+          <h3 class="hero_supersubheader-genre">Pie</h3>
+          <h2 class="hero_subheader-name">Lemon Meringue Pie</h2>
+          <p class="hero_paragraph-price">$5.00</p>
+        </li>
+        <li class="hero_listItem">
+          <picture
+            ><source
+              srcset="images/image-waffle-tablet.jpg"
+              media="(min-width: 40rem)" />
+            <img
+              src="images/image-waffle-mobile.jpg"
+              alt=""
+              class="hero_image" /></picture
+          ><button class="hero_button-addtocart">Add to Cart</button>
+          <h3 class="hero_supersubheader-genre">Cake</h3>
+          <h2 class="hero_subheader-name">Red Velvet Cake</h2>
+          <p class="hero_paragraph-price">$4.50</p>
+        </li>
+        <li class="hero_listItem">
+          <picture
+            ><source
+              srcset="images/image-brownie-tablet.jpg"
+              media="(min-width: 40rem)" />
+            <img
+              src="images/image-brownie-mobile.jpg"
+              alt=""
+              class="hero_image" /></picture
+          ><button class="hero_button-addtocart">Add to Cart</button>
+          <h3 class="hero_supersubheader-genre">Brownie</h3>
+          <h2 class="hero_subheader-name">Salted Caramel Brownie</h2>
+          <p class="hero_paragraph-price">$4.50</p>
+        </li>
+        <li class="hero_listItem">
+          <picture
+            ><source
+              srcset="images/image-panna-cotta-tablet.jpg"
+              media="(min-width: 40rem)" />
+            <img
+              src="images/image-panna-cotta-mobile.jpg"
+              alt=""
+              class="hero_image" /></picture
+          ><button class="hero_button-addtocart">Add to Cart</button>
+          <h3 class="hero_supersubheader-genre">Panna Cotta</h3>
+          <h2 class="hero_subheader-name">Vanilla Panna Cotta</h2>
+          <p class="hero_paragraph-price">$6.50</p>
+        </li>
+      </ul>
+    </main>
+    <section class="cart">
+      <h2 class="cart_header">
+        Your Cart <span class="card_span-header js-card_span-header">( )</span>
+      </h2>
+      <div class="cart_empty-container">
+        <img
+          src="images/illustration-empty-cart.svg"
+          alt=""
+          class="cart_img-empty"
+        />
+        <p class="cart_paragraph-empty">Your added items will appear here</p>
+      </div>
+    </section>
+  </body>
+</html>
