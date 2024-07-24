@@ -130,22 +130,23 @@ body {
   text-align: center;
 }
 @media (min-width: 40rem) {
-    .hero_list {
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-  
-    }
+  .hero_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
-@media (min-width: 50rem) {
-    body {display: flex;
+@media (min-width: 60rem) {
+  body {
+    display: flex;
     padding: 4rem;
-gap: 2rem;}
-    .hero_list {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .cart {
-        height: fit-content;
-    }
+    gap: 2rem;
+  }
+  .hero_list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .cart {
+    height: fit-content;
+  }
 }
 /* SELECTED !!!!! */
 /* HERO DESIGN */
