@@ -63,7 +63,7 @@
     <main class="hero">
       <h1 class="hero_header">Desserts</h1>
       <ul class="hero_list">
-        <li class="hero_listItem">
+        <li class="hero_listItem" data-item="1">
           <picture>
             <source
               srcset="images/image-waffle-desktop.jpg"
@@ -80,7 +80,7 @@
           <h2 class="hero_subheader-name">Waffle with Berries</h2>
           <p class="hero_paragraph-price">$6.50</p>
         </li>
-        <li class="hero_listItem">
+        <li class="hero_listItem" data-item="2">
           <picture>
             <source
               srcset="images/image-creme-brulee-desktop.jpg"
@@ -97,7 +97,7 @@
           <h2 class="hero_subheader-name">Vanilla Bean Crème Brûlée</h2>
           <p class="hero_paragraph-price">$7.00</p>
         </li>
-        <li class="hero_listItem">
+        <li class="hero_listItem" data-item="3">
           <picture>
             <source
               srcset="images/image-macaron-desktop.jpg"
@@ -114,7 +114,7 @@
           <h2 class="hero_subheader-name">Macaron Mix of Five</h2>
           <p class="hero_paragraph-price">$8.00</p>
         </li>
-        <li class="hero_listItem">
+        <li class="hero_listItem" data-item="4">
           <picture>
             <source
               srcset="images/image-tiramisu-desktop.jpg"
@@ -131,7 +131,7 @@
           <h2 class="hero_subheader-name">Classic Tiramisu</h2>
           <p class="hero_paragraph-price">$5.50</p>
         </li>
-        <li class="hero_listItem">
+        <li class="hero_listItem" data-item="5">
           <picture>
             <source
               srcset="images/image-baklava-desktop.jpg"
@@ -148,7 +148,7 @@
           <h2 class="hero_subheader-name">Pistachio Baklava</h2>
           <p class="hero_paragraph-price">$4.00</p>
         </li>
-        <li class="hero_listItem">
+        <li class="hero_listItem" data-item="6">
           <picture>
             <source
               srcset="images/image-waffle-desktop.jpg"
@@ -165,7 +165,7 @@
           <h2 class="hero_subheader-name">Lemon Meringue Pie</h2>
           <p class="hero_paragraph-price">$5.00</p>
         </li>
-        <li class="hero_listItem">
+        <li class="hero_listItem" data-item="7">
           <picture>
             <source
               srcset="images/image-waffle-desktop.jpg"
@@ -182,7 +182,7 @@
           <h2 class="hero_subheader-name">Red Velvet Cake</h2>
           <p class="hero_paragraph-price">$4.50</p>
         </li>
-        <li class="hero_listItem">
+        <li class="hero_listItem" data-item="8">
           <picture>
             <source
               srcset="images/image-brownie-desktop.jpg"
@@ -199,7 +199,7 @@
           <h2 class="hero_subheader-name">Salted Caramel Brownie</h2>
           <p class="hero_paragraph-price">$4.50</p>
         </li>
-        <li class="hero_listItem">
+        <li class="hero_listItem" data-item="9">
           <picture>
             <source
               srcset="images/image-panna-cotta-desktop.jpg"
@@ -220,72 +220,38 @@
     </main>
     <section class="cart">
       <h2 class="cart_header">
-        Your Cart <span class="card_span-header js-card_span-header">( )</span>
+        Your Cart
+        <span id="totalQuantity" class="card_span-header js-card_span-header"
+          >( )</span
+        >
       </h2>
-      <!-- <div class="cart_empty-container">
-        <img
-          src="images/illustration-empty-cart.svg"
-          alt=""
-          class="cart_img-empty"
-        />
-        <p class="cart_paragraph-empty">Your added items will appear here</p>
-      </div> -->
+      <div class="cart_empty-container"></div>
       <div class="cart__container">
         <div class="cart__items">
-          <div class="cart__item">
-            <div class="cart__info">
-              <p class="cart__title">Classic Tiramisu</p>
-              <div>
-                <p class="cart__quantity">1x</p>
-                <p class="cart__price">@ $5.50</p>
-                <p class="cart__total">$5.50</p>
-              </div>
-            </div>
-            <a href="#" class="cart__remove" id="removeCart">
-              <img src="/images/icon-remove-item.svg" alt="Remove Icon" />
-            </a>
-          </div>
-          <div class="cart__item">
-            <div class="cart__info">
-              <p class="cart__title">Classic Tiramisu</p>
-              <div>
-                <p class="cart__quantity">1x</p>
-                <p class="cart__price">@ $5.50</p>
-                <p class="cart__total">$5.50</p>
-              </div>
-            </div>
-            <a href="#" class="cart__remove" id="removeCart">
-              <img src="/images/icon-remove-item.svg" alt="Remove Icon" />
-            </a>
-          </div>
-          <div class="cart__item">
-            <div class="cart__info">
-              <p class="cart__title">Classic Tiramisu</p>
-              <div>
-                <p class="cart__quantity">1x</p>
-                <p class="cart__price">@ $5.50</p>
-                <p class="cart__total">$5.50</p>
-              </div>
-            </div>
-            <a href="#" class="cart__remove" id="removeCart">
-              <img src="/images/icon-remove-item.svg" alt="Remove Icon" />
-            </a>
-          </div>
+          <img
+            src="images/illustration-empty-cart.svg"
+            alt=""
+            class="cart_img-empty"
+          />
+          <p class="cart_paragraph-empty">Your added items will appear here</p>
         </div>
 
-        <div class="cart__totalAmount">
-          <p>Order Total</p>
-          <span>$46.50</span>
-        </div>
+        <div class="cart__checkout">
+          <div class="cart__totalAmount">
+            <p>Order Total</p>
+            <span id="cartTotalPay">$46.50</span>
+          </div>
 
-        <div class="cart__deliveryInfo">
-          <img src="/images/icon-carbon-neutral.svg" alt="" />
-          <p>
-            This is a <span class="text-bold">carbon-neutral</span> delivery
-          </p>
+          <div class="cart__deliveryInfo">
+            <img src="/images/icon-carbon-neutral.svg" alt="" />
+            <p>
+              This is a <span class="text-bold">carbon-neutral</span> delivery
+            </p>
+          </div>
+          <button type="button" class="btn btn-order">Confirm Order</button>
         </div>
-        <button type="button" class="btn btn-order">Confirm Order</button>
       </div>
     </section>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
