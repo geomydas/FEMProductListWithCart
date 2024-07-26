@@ -114,7 +114,7 @@ class UI {
               </div>
             </div>
             <a href="#" class="cart__remove" id="removeCart">
-              <img id="removeCartIcon" src="/images/icon-remove-item.svg" alt="Remove Icon" />
+              <img id="removeCartIcon" src="images/icon-remove-item.svg" alt="Remove Icon" />
             </a>
           </div>
         `
